@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Go for gear</title>
+<script>
+
+var minAng = -180;
+var maxAng = 0;
+var ang = minAng;
+var timings;
+
+var el = function(ele){
+	return document.getElementById(ele);
+}
+
+function rotateNeedle(){
+	if ( ang < maxAng){
+		el('a1').style.webkitTransform = 'rotate('+ang+'deg)';
+		ang++;
+	}else {
+		ang = minAng;	
+	}
+	el('ang').innerHTML = ang;
+}
+	
+window.onload = function(){
+	timings = setInterval(rotateNeedle,30);
+};
+
+</script>
+<style>
+.ro{
+	position:absolute; 
+	background-image:url(background.jpg);
+	background-repeat:no-repeat;
+	width:210px;
+	height:180px;
+	padding-top:95px;
+	overflow:hidden;
+}
+p{
+	padding-top:180px;
+}
+</style>
+</head>
+<body>
+<div class="ro">
+<div id="a1"><img src="analoghours-h.png" alt="Needle" width="180" height="11"/></div>
+</div>
+<p>Rotating at angle <span id="ang">NA</span>. This is just a POC.</p>
+</body>
+</html>
