@@ -1,0 +1,16 @@
+html,body{
+	font-family:monospace,Verdana;
+	font-size:1em;
+}
+.ro{
+	position:absolute; 
+	background-image:url(background.jpg);
+	background-repeat:no-repeat;
+	width:210px;
+	height:180px;
+	padding-top:95px;
+	overflow:hidden;
+}
+p{
+	padding-top:180px;
+}
