@@ -4,6 +4,8 @@
 	var ang = minAng;
 	var timings;
 
+	//many times people use jQuery just because they dont wanna write this lil function
+	//ToDo: Will try doing it with querySelector / querySelectorAll
 	var el = function(ele){
 		return document.getElementById(ele);
 	}
